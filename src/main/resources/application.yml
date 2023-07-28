@@ -1,0 +1,21 @@
+spring:
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+  data:
+    mongodb:
+      uri: mongodb+srv://myusermongo:p#fka412Gap2mn4pa-2414HALIaaqn@nosql.mongodb.net/?retryWrites=true&w=majority
+      database: TIME_TRACKER_APP
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: env, health, info, loggers
+
+logging:
+  level:
+    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
